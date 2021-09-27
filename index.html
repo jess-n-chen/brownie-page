@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Basics Project</title>
+    <style>
+      body {
+        background: linear-gradient(
+          106.7deg,
+          rgb(151, 150, 240) 12.1%,
+          rgb(255, 206, 236) 63.2%
+        );
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #132743;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 48px;
+        line-height: 30px;
+      }
+
+      p {
+        color: #407088;
+        font-size: 18px;
+      }
+
+      a,
+      li {
+        color: #132743;
+        font-size: 18px;
+      }
+
+      hr {
+        border: 1px dotted #132743;
+      }
+      img {
+        display: block;
+        padding: 10px;
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid #407088;
+        border-radius: 25px;
+        box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.25);
+        color: #407088;
+        display: block;
+        font-size: 18px;
+        margin: 20px auto;
+        padding: 15px 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #407088;
+        color: #ffffff;
+        cursor: pointer;
+      }
+
+      .about-brownie {
+        background-color: #ffffff;
+        border-radius: 30px;
+        margin: 0 auto;
+        padding: 30px 25px;
+        width: 75%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-brownie">
+      <h1>Brownies</h1>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/681/original/brownies.jpeg?1625947400"
+        width="400"
+        align="right"
+      />
+      <p>
+        A brownie is a <em>chocolate baked</em> confection in either square or
+        rectangular shape that come in a variety of forms. They can be
+        <span>fudgy or cakey</span>, and include a variety of toppings such as
+        nuts, frosting, etc.
+      </p>
+      <h2><strong>Recipe Suggestions:</strong></h2>
+      <p>
+        There are a few different ways to make brownies, but here are some of my
+        favorite recipes:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.inspiredtaste.net/24412/cocoa-brownies-recipe/"
+            target="_blank"
+            >Easy Fudgy Brownies</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.errenskitchen.com/nutty-homemade-brownies/"
+            target="_blank"
+            >Nutty Homemade Brownies</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.mamaknowsglutenfree.com/easy-gluten-free-brownies/"
+            target="_blank"
+            >Gluten-Free Brownies</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.thedietchefs.com/healthy-low-calorie-brownies/"
+            target="_blank"
+            >Healthy Low Calorie Brownies</a
+          >
+        </li>
+      </ul>
+      <p>
+        For more recipe suggestions, click on the Tell Me More button below!
+      </p>
+      <button class="tell-me-more">Tell Me More!</button>
+    </div>
+  </body>
+  <script>
+    function tellMeMore() {
+      let firstName = prompt("What is your first name?");
+      let email = prompt("What is your email?");
+      let brownieType = prompt(
+        "How do you like your brownies? Chewy, Fudgy, or Cakey?"
+      );
+
+      if (brownieType.toLowerCase() === "Fudgy".toLowerCase()) {
+        alert(`Me too! I love ${brownieType} too! 😍`);
+      } else {
+        alert(`${brownieType} is cool, but I love Fudgy brownies more 😁`);
+      }
+    }
+
+    let tellMeMoreButton = document.querySelector(".tell-me-more");
+    tellMeMoreButton.addEventListener("click", tellMeMore);
+  </script>
+</html>
